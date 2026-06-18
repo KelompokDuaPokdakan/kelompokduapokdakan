@@ -63,6 +63,27 @@
             text-shadow: 0 0 8px rgba(255,255,255,0.6);
             transform: translateY(-2px);
         }
+        /* Tombol Kembali Ke Kelompok */
+        .btn-kembali {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: white !important;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-right: 5px;
+        }
+        .btn-kembali:hover {
+            background: rgba(255, 255, 255, 0.3);
+            text-shadow: none !important;
+            transform: translateX(-3px) !important;
+        }
         /* Hero Section */
         .hero {
             max-width: 900px;
@@ -139,6 +160,10 @@
             .main-card {
                 padding: 35px 25px;
             }
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
         }
     </style>
 </head>
@@ -146,7 +171,14 @@
     <!-- Navigasi -->
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo">🌸 Hana</a>
+            <!-- Sisi Kiri: Tombol Kembali dan Logo -->
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <a href="../index.html" class="btn-kembali">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    Kembali
+                </a>
+                <a href="index.html" class="logo">🌸 Hana</a>
+            </div>
             <div>
                 <a href="index.html">Beranda</a>
                 <a href="biodata.html">Biodata</a>
