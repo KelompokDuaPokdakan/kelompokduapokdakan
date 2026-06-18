@@ -39,6 +39,42 @@
             overflow-x: hidden;
         }
 
+        /* Tombol Kembali (Back Button) */
+        .back-btn {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-btn svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: var(--accent-color);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        .back-btn:hover svg {
+            transform: translateX(-3px);
+        }
+
         /* Animated background elements */
         .bg-decoration {
             position: fixed;
@@ -85,6 +121,7 @@
             max-width: 1200px;
             width: 100%;
             animation: fadeIn 0.8s ease-out;
+            margin-top: 40px; /* Memberi ruang di bawah tombol kembali */
         }
 
         @keyframes fadeIn {
@@ -139,7 +176,7 @@
             text-decoration: none;
             font-weight: 600;
             font-size: 16px;
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-sm);
             transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             border: 1px solid rgba(0, 131, 176, 0.1);
             overflow: hidden;
@@ -189,6 +226,17 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .back-btn {
+                top: 16px;
+                left: 16px;
+                font-size: 13px;
+                padding: 6px 12px;
+            }
+
+            .container {
+                margin-top: 60px;
+            }
+
             h1 {
                 font-size: 36px;
                 margin-bottom: 8px;
@@ -213,6 +261,10 @@
         @media (max-width: 480px) {
             body {
                 padding: 16px;
+            }
+
+            .container {
+                margin-top: 80px;
             }
 
             h1 {
@@ -261,6 +313,15 @@
 
 </head>
 <body>
+
+    <!-- Tombol Kembali -->
+    <a href="../index.html" class="back-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        Kembali
+    </a>
 
     <div class="bg-decoration">
         <div class="blob blob-1"></div>
