@@ -121,6 +121,23 @@
       flex-wrap: wrap;
       margin-top: 1rem;
     }
+    
+    /* Wadah responsif untuk Google Form dan Looker Studio */
+    .embed-container {
+      width: 100%;
+      height: 600px; /* Tinggi default, silakan sesuaikan dengan isi form */
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .embed-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
     .back-button {
       display: inline-block;
       margin-top: 1rem;
@@ -131,6 +148,8 @@
       border-radius: 8px;
       font-weight: 500;
       transition: background 0.2s ease;
+      margin-right: 5px;
+      margin-left: 5px;
     }
     .back-button:hover {
       background-color: #3d5887;
@@ -153,29 +172,53 @@
 
   <div class="content-container">
     <h2 class="section-title">SISTEM RENCANA USAHA BERSAMA</h2>
+    
     <div class="card">
       <h2>Formulir rencana usaha bersama</h2>
       <p>Pokdakan (Kelompok Pembudidaya Ikan) adalah kelompok formal yang dibentuk oleh para pembudidaya ikan untuk saling berbagi pengetahuan, mengakses bantuan pemerintah, dan meningkatkan pengelolaannya. Beberapa Pokdakan juga mengembangkan unit simpan pinjam untuk membantu modal usaha anggota.</p>
+      
+      <!-- Embed Google Form (Rencana Usaha Bersama) -->
+      <div class="embed-container">
+        <iframe 
+          src="https://forms.gle/qSk6Ak9NPb8yRXot6" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0">
+        </iframe>
+      </div>
+
+      <!-- Embed Google Sheets (Nasabah Simpan Pinjam) -->
+      <p style="color: #666; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 0.95rem; font-weight: bold;">Tampilan Data Spreadsheet:</p>
+      <div class="embed-container" style="height: 500px;">
+        <iframe 
+          src="https://docs.google.com/spreadsheets/d/1JBR5fl54tANKvVcWe85lM-vHxjE03FBqt6tsB6t0MKU/edit?usp=sharing" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0"
+          loading="lazy">
+        </iframe>
+      </div>
+
       <div style="text-align: center;">
-        <a href="https://forms.gle/qSk6Ak9NPb8yRXot6" class="back-button">Input Rencana Usaha Bersama</a>
-        <a href="https://docs.google.com/spreadsheets/d/1JBR5fl54tANKvVcWe85lM-vHxjE03FBqt6tsB6t0MKU/edit?usp=sharing" class="back-button">Data Rencana Usaha Bersama</a>
+        <a href="https://forms.gle/qSk6Ak9NPb8yRXot6" class="back-button">Rencana Usaha Bersama</a>
+        <a href="https://docs.google.com/spreadsheets/d/1JBR5fl54tANKvVcWe85lM-vHxjE03FBqt6tsB6t0MKU/edit?usp=sharing" class="back-button">Rencana Usaha Bersama</a>
       </div>
     </div>
   </div>
 
-<div class="card">
-        <h2>📊 Sajian Data Looker Studio</h2>
-        <p>Lihat visualisasi datasecara interaktif dengan grafik dan dashboard yang otomatis terupdate setiap kali ada perubahan data di spreadsheet.</p>
-      
-        <div class="looker-container">
-          <iframe 
-            src="https://datastudio.google.com/embed/reporting/1a771b0e-680d-4776-8cfa-01765156554f/page/page_12345" width="800" height="500"
-            allowfullscreen loading="lazy">
-          </iframe>
-        </div>
-</div>
-           
   <div class="content-container" style="margin-top: 0;">
+    <div class="card">
+      <h2>📊 Sajian Data Looker Studio</h2>
+      <p>Lihat visualisasi datasecara interaktif dengan grafik dan dashboard yang otomatis terupdate setiap kali ada perubahan data di spreadsheet.</p>
+    
+      <div class="embed-container" style="height: 500px;">
+        <iframe 
+          src="https://datastudio.google.com/embed/reporting/1a771b0e-680d-4776-8cfa-01765156554f/page/page_12345" 
+          allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+    </div>
+             
     <h2 class="section-title">EVALUASI LAYANAN</h2>
     <div class="card">
       <h2>Survei Kepuasan Pengguna</h2>
@@ -187,14 +230,20 @@
     </div>
 
     <div class="card">
-<div style="text-align: center;">
-  <div class="card">
-    <iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/4672b5b0-6ba6-4518-8913-d509eec63b20/page/page_12345" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-    <p>File Excel untuk evaluasi Rencana Kegiatan Bersama anggota Pokdakan telah tersedia. Anda dapat mengunduhnya melalui tombol di bawah ini untuk melengkapi dan menganalisis data hasil survei.</p>
-      <a href="Excel RENCANA USAHA BERSAMA.xlsx" class="back-button">Unduh Evaluasi Layanan</a>
+      <div style="text-align: center;">
+        <div class="embed-container" style="height: 450px;">
+          <iframe 
+            src="https://datastudio.google.com/embed/reporting/4672b5b0-6ba6-4518-8913-d509eec63b20/page/page_12345" 
+            frameborder="0" 
+            style="border:0" 
+            allowfullscreen 
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+          </iframe>
+        </div>
+        <p>File Excel untuk evaluasi Rencana Kegiatan Bersama anggota Pokdakan telah tersedia. Anda dapat mengunduhnya melalui tombol di bawah ini untuk melengkapi dan menganalisis data hasil survei.</p>
+        <a href="Excel/Excel RENCANA USAHA BERSAMA.xlsx" class="back-button">Unduh Evaluasi Layanan</a>
+      </div>
     </div>
-  </div>
-</div>
 
     <div style="text-align: center; margin-bottom: 3rem;">
       <a href="index.html" class="back-button">Kembali ke Menu Utama</a>
